@@ -1,0 +1,254 @@
+SQL> spool
+currently spooling to D://JOINS.sql.txt
+SQL> SELECT LOCATION_ID, STREET_ADDRESS, CITY, STATE_PROVINCE,COUNTRY_NAME
+  2  FROM LOCATIONS
+  3  NATURAL JOIN COUNTRIES;
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+       1000 1297 Via Cola di Rie                                                
+Roma                                                                            
+Italy                                                                           
+                                                                                
+       1100 93091 Calle della Testa                                             
+Venice                                                                          
+Italy                                                                           
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+                                                                                
+       1200 2017 Shinjuku-ku                                                    
+Tokyo                          Tokyo Prefecture                                 
+Japan                                                                           
+                                                                                
+       1300 9450 Kamiya-cho                                                     
+Hiroshima                                                                       
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+Japan                                                                           
+                                                                                
+       1400 2014 Jabberwocky Rd                                                 
+Southlake                      Texas                                            
+United States of America                                                        
+                                                                                
+       1500 2011 Interiors Blvd                                                 
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+South San Francisco            California                                       
+United States of America                                                        
+                                                                                
+       1600 2007 Zagora St                                                      
+South Brunswick                New Jersey                                       
+United States of America                                                        
+                                                                                
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+       1700 2004 Charade Rd                                                     
+Seattle                        Washington                                       
+United States of America                                                        
+                                                                                
+       1800 147 Spadina Ave                                                     
+Toronto                        Ontario                                          
+Canada                                                                          
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+                                                                                
+       1900 6092 Boxwood St                                                     
+Whitehorse                     Yukon                                            
+Canada                                                                          
+                                                                                
+       2000 40-5-12 Laogianggen                                                 
+Beijing                                                                         
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+China                                                                           
+                                                                                
+       2100 1298 Vileparle (E)                                                  
+Bombay                         Maharashtra                                      
+India                                                                           
+                                                                                
+       2200 12-98 Victoria Street                                               
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+Sydney                         New South Wales                                  
+Australia                                                                       
+                                                                                
+       2300 198 Clementi North                                                  
+Singapore                                                                       
+Singapore                                                                       
+                                                                                
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+       2400 8204 Arthur St                                                      
+London                                                                          
+United Kingdom                                                                  
+                                                                                
+       2500 Magdalen Centre, The Oxford Science Park                            
+Oxford                         Oxford                                           
+United Kingdom                                                                  
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+                                                                                
+       2600 9702 Chester Road                                                   
+Stretford                      Manchester                                       
+United Kingdom                                                                  
+                                                                                
+       2700 Schwanthalerstr. 7031                                               
+Munich                         Bavaria                                          
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+Germany                                                                         
+                                                                                
+       2800 Rua Frei Caneca 1360                                                
+Sao Paulo                      Sao Paulo                                        
+Brazil                                                                          
+                                                                                
+       2900 20 Rue des Corps-Saints                                             
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+Geneva                         Geneve                                           
+Switzerland                                                                     
+                                                                                
+       3000 Murtenstrasse 921                                                   
+Bern                           BE                                               
+Switzerland                                                                     
+                                                                                
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+       3100 Pieter Breughelstraat 837                                           
+Utrecht                        Utrecht                                          
+Netherlands                                                                     
+                                                                                
+       3200 Mariano Escobedo 9991                                               
+Mexico City                    Distrito Federal,                                
+Mexico                                                                          
+
+LOCATION_ID STREET_ADDRESS                                                      
+----------- ----------------------------------------                            
+CITY                           STATE_PROVINCE                                   
+------------------------------ -------------------------                        
+COUNTRY_NAME                                                                    
+----------------------------------------                                        
+                                                                                
+
+23 rows selected.
+
+SQL> SELECT LAST_NAME, JOB_ID, DEPARTMENT_ID, DEPARTMENT_NAME
+  2  FROM EMPLOYEES
+  3  NATURAL JOIN DEPARTMENTS
+  4  WHERE LOCATION = 'TORENTO';
+WHERE LOCATION = 'TORENTO'
+      *
+ERROR at line 4:
+ORA-00904: "LOCATION": invalid identifier 
+
+
+SQL> SELECT LAST_NAME, JOB_ID, DEPARTMENT_ID, DEPARTMENT_NAME
+  2  FROM EMPLOYEES
+  3  JOIN DEPARTMENTS
+  4  ON(
+  5  
+SQL> 
+SQL> SELECT E.LAST_NAME, E.JOB_ID, D.DEPARTMENT_ID, D.DEPARTMENT_NAME
+  2  FROM EMPLOYEES E JOIN DEPARTMENTS D
+  3  ON (E.DEPARTMENT_ID=D.DEPARTMENT_ID)
+  4  JOIN LOCATIONS L
+  5  ON (D.LOCATION_ID = L.LOCATION_ID)
+  6  WHERE UPPER(L.LOCATION)='TORENTO';
+WHERE UPPER(L.LOCATION)='TORENTO'
+            *
+ERROR at line 6:
+ORA-00904: "L"."LOCATION": invalid identifier 
+
+
+SQL> SELECT E.LAST_NAME, E.JOB_ID, D.DEPARTMENT_ID, D.DEPARTMENT_NAME
+  2  FROM EMPLOYEES E JOIN DEPARTMENTS D
+  3  ON (E.DEPARTMENT_ID=D.DEPARTMENT_ID)
+  4  JOIN LOCATIONS L
+  5  ON (D.LOCATION_ID = L.LOCATION_ID)
+  6  WHERE UPPER(L.CITY)='TORENTO';
+
+no rows selected
+
+SQL> SELECT E.LAST_NAME, E.JOB_ID, D.DEPARTMENT_ID, D.DEPARTMENT_NAME
+  2  FROM EMPLOYEES E JOIN DEPARTMENTS D
+  3  ON (E.DEPARTMENT_ID=D.DEPARTMENT_ID)
+  4  JOIN LOCATIONS L
+  5  ON (D.LOCATION_ID = L.LOCATION_ID)
+  6  WHERE UPPER(L.CITY)='TORONTO';
+
+LAST_NAME                 JOB_ID     DEPARTMENT_ID                              
+------------------------- ---------- -------------                              
+DEPARTMENT_NAME                                                                 
+------------------------------                                                  
+Hartstein                 MK_MAN                20                              
+Marketing                                                                       
+                                                                                
+Fay                       MK_REP                20                              
+Marketing                                                                       
+                                                                                
+
+SQL> spool off
